@@ -2,20 +2,20 @@ import React, { Component } from 'react'
 import data from '../data/data.json'
 import { Link } from 'react-router-dom'
 
-class PhotoList extends Component {
+class PhotoList2 extends Component {
   render() {
     console.log('mi parameters: ' + this.props.match.params.id)
-    console.log(data[this.props.match.params.id])
-    console.log(Object.keys(data[this.props.match.params.id]))
+    console.log(data['miniatures'])
+    console.log(Object.keys(data['miniatures']))
     return (
       <div>
-        <h3>{data[this.props.match.params.id].title}</h3>
-        <p>{data[this.props.match.params.id].description}</p>
+        <h3>{data['miniatures'].title}</h3>
+        <p>{data['miniatures'].description}</p>
         <ul>
-          {data[this.props.match.params.id].photos.map((photo, i) => {
+          {data['miniatures'].photos.map((photo, i) => {
             return (
               <li key={i}>
-                <Link to={`/${this.props.match.params.id}/${i}`}>
+                <Link to={`/miniatures/${i}`}>
                   <img src={photo.imageURL} />
                 </Link>
               </li>
@@ -27,4 +27,4 @@ class PhotoList extends Component {
   }
 }
 
-export default PhotoList
+export default PhotoList2

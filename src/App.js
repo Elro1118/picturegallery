@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import CategoryList from './components/CategoryList'
 import PhotoList from './components/PhotoList'
 import PhotoDetail from './components/PhotoDetail'
+// import PhotoList2 from './components/PhotoList2'
 
 class App extends Component {
   render() {
@@ -11,9 +12,9 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={CategoryList} />
-            <Route exact path="/pandas" component={PhotoList} />
-            <Route exact path="/pandas/:id" component={PhotoDetail} />
-            <Route exact path="/miniatures" component={PhotoList} />
+            <Route exact path="/:id" component={PhotoList} />
+            <Route exact path="/:type/:id" component={PhotoDetail} />
+            {/* <Route exact path="/miniatures/:id" component={PhotoDetail} /> */}
 
             {/* <Route exact path="/page1" component={Page1} />
             <Route exact path="/page2" component={Page2} />
