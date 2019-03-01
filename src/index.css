@@ -47,8 +47,11 @@ ul {
   color: #4a4a4a;
 }
 img {
-  width: 15rem;
+  width: 50%;
 }
-.pictures {
+.pictures-section {
   display: flex;
+}
+.picture {
+  flex: 1;
 }
